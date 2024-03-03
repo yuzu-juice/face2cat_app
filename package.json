@@ -21,11 +21,16 @@
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
+    "@capacitor/camera": "^5.0.9",
+    "@capacitor/filesystem": "^5.2.1",
+    "@capacitor/storage": "^1.2.5",
     "@ionic/angular": "^7.0.0",
+    "@ionic/pwa-elements": "^3.2.2",
+    "@vladmandic/face-api": "^1.7.13",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.2"
+    "zone.js": "^0.14.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.0",

@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      ねこ
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content padding>
+  <h1>遊び方</h1><br>
+  <ol>
+    <li>カメラのボタンを押して、写真を撮るか、ローカルストレージから選ぶ（人間の顔が写っている画像を選ぶ）</li>
+    <li>画面に写真が出てきたら、猫になるボタンを押してすこし待つ</li>
+    <li>猫になれる</li>
+  </ol>
+  ※一回遊ぶごとにリロードしてください
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+        <ion-img [src]="photo.webviewPath" id="photo" style="position: absolute"></ion-img>
+      </ion-col>
+    </ion-row>
+    <div id="test_canvas" style="position: relative"></div>
+  </ion-grid>
+ 
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button  (click)="addPhotoToGallery()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="danger" (click)="faceDetect()">猫になる</ion-fab-button>
+  </ion-fab>
 </ion-content>
